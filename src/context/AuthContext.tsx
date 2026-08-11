@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { User, BookedClass } from '../types';
 import { saveBookedClassToSupabase, fetchBookedClassesFromSupabase, SUPABASE_PROJECT_ID } from '../lib/supabase';
 import { mockCourses } from '../data/mockData';
+import defaultAvatarImg from '../assets/images/user_avatar_1786437421524.jpg';
 
 interface AuthContextType {
   user: User | null;
@@ -63,7 +64,7 @@ const defaultUser: User = {
   id: 'usr-101',
   name: 'Prajapati Kumar Rishu',
   email: 'prajapatikumarrishu32@gmail.com',
-  avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
+  avatar: defaultAvatarImg,
   role: 'student',
   xp: 8450,
   streak: 14,

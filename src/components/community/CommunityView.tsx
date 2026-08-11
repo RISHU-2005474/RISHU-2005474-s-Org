@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Code2, ThumbsUp, MessageSquare, CheckCircle2, Plus, Tag, Search } from 'lucide-react';
 import { mockCommunityPosts } from '../../data/mockData';
 import { CommunityPost } from '../../types';
+import defaultAvatarImg from '../../assets/images/user_avatar_1786437421524.jpg';
 
 export const CommunityView: React.FC = () => {
   const [posts, setPosts] = useState<CommunityPost[]>(mockCommunityPosts);
@@ -19,7 +20,7 @@ export const CommunityView: React.FC = () => {
       id: `post-${Date.now()}`,
       author: {
         name: 'Prajapati Kumar Rishu',
-        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
+        avatar: defaultAvatarImg,
         badge: 'Developer'
       },
       category: newCategory,

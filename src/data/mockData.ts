@@ -9,6 +9,7 @@ import {
   LeaderboardEntry,
   CertificateData
 } from '../types';
+import defaultAvatarImg from '../assets/images/user_avatar_1786437421524.jpg';
 
 export const mockCategories: CategoryItem[] = [
   { id: 'programming', title: 'Programming', description: 'Core syntax, algorithms, data structures & logic', iconName: 'Code', courseCount: 42 },
@@ -610,7 +611,7 @@ export const mockLeaderboard: LeaderboardEntry[] = [
   { rank: 1, name: 'Siddharth Patel', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80', xp: 14250, challengesSolved: 142, streak: 45, badge: 'Master Developer' },
   { rank: 2, name: 'Claire Dubois', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80', xp: 12800, challengesSolved: 128, streak: 38, badge: 'Expert' },
   { rank: 3, name: 'Marcus Vance', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80', xp: 11900, challengesSolved: 115, streak: 31, badge: 'Cyber Guard' },
-  { rank: 4, name: 'Prajapati Kumar (You)', avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80', xp: 8450, challengesSolved: 84, streak: 14, badge: 'Developer' },
+  { rank: 4, name: 'Prajapati Kumar (You)', avatar: defaultAvatarImg, xp: 8450, challengesSolved: 84, streak: 14, badge: 'Developer' },
   { rank: 5, name: 'Aaliyah Washington', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80', xp: 7200, challengesSolved: 71, streak: 22, badge: 'Explorer' }
 ];
 

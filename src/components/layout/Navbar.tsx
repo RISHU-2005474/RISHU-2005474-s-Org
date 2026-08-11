@@ -4,8 +4,6 @@ import {
   Search,
   Bell,
   User as UserIcon,
-  Moon,
-  Sun,
   Menu,
   X,
   Sparkles,
@@ -112,14 +110,7 @@ export const Navbar: React.FC = () => {
             </kbd>
           </button>
 
-          {/* Theme Toggle Button */}
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition"
-            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-          >
-            {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
-          </button>
+
 
           {user ? (
             <>

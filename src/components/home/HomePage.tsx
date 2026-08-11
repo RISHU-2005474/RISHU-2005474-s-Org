@@ -264,7 +264,13 @@ export const HomePage: React.FC = () => {
               </div>
 
               <div className="px-5 pb-5 pt-2">
-                <button className="w-full py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white group-hover:bg-cyan-500 group-hover:text-white transition">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigateToCourse(course.id);
+                  }}
+                  className="w-full py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white group-hover:bg-cyan-500 group-hover:text-white transition"
+                >
                   Enroll Now
                 </button>
               </div>
@@ -420,7 +426,7 @@ export const HomePage: React.FC = () => {
           <div className="p-6 rounded-2xl bg-slate-900 border-2 border-cyan-500 text-white space-y-4 relative shadow-xl shadow-cyan-500/10">
             <span className="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500 text-slate-950 uppercase">Most Popular</span>
             <h3 className="font-bold text-lg">PRO ACADEMY</h3>
-            <div className="text-3xl font-black">₹2,500 <span className="text-xs font-normal text-slate-400">/ seat</span></div>
+            <div className="text-3xl font-black">₹0 <span className="text-xs font-normal text-slate-400">/ forever</span></div>
             <ul className="space-y-2 text-xs text-slate-300">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-400" /> All 200+ Premium Courses</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-400" /> Unlimited AI Tutor guidance</li>
@@ -432,7 +438,7 @@ export const HomePage: React.FC = () => {
 
           <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
             <h3 className="font-bold text-lg text-slate-900 dark:text-white">TEAM / UNIVERSITY</h3>
-            <div className="text-3xl font-black text-slate-900 dark:text-white">₹10,000 <span className="text-xs font-normal text-slate-400">/ seat</span></div>
+            <div className="text-3xl font-black text-slate-900 dark:text-white">₹0 <span className="text-xs font-normal text-slate-400">/ forever</span></div>
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-300">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Everything in Pro</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Team Analytics & Drop-off reports</li>

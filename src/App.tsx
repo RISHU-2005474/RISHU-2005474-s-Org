@@ -4,6 +4,7 @@ import { CourseProvider, useCourse } from './context/CourseContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { GlobalSearchModal } from './components/layout/GlobalSearchModal';
+import { AuthModal } from './components/auth/AuthModal';
 
 import { HomePage } from './components/home/HomePage';
 import { CourseCatalog, CourseDetails } from './components/courses/CourseCatalog';
@@ -68,20 +69,34 @@ const PageContent: React.FC = () => {
   }
 };
 
+const AppMain: React.FC = () => {
+  const { currentPage, setCurrentPage } = useCourse();
+  const isAuthModalOpen = currentPage === 'login' || currentPage === 'register';
+
+  return (
+    <div className="min-h-screen bg-[#08080a] text-zinc-100 font-sans flex flex-col justify-between selection:bg-violet-500/30 selection:text-violet-200 transition-colors duration-200 relative overflow-x-hidden">
+      <div>
+        <Navbar />
+        <main>
+          <PageContent />
+        </main>
+      </div>
+      <Footer />
+      <GlobalSearchModal />
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        initialMode={currentPage === 'register' ? 'register' : 'login'}
+        onClose={() => setCurrentPage('home')}
+      />
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <AuthProvider>
       <CourseProvider>
-        <div className="min-h-screen bg-[#08080a] text-zinc-100 font-sans flex flex-col justify-between selection:bg-violet-500/30 selection:text-violet-200 transition-colors duration-200 relative overflow-x-hidden">
-          <div>
-            <Navbar />
-            <main>
-              <PageContent />
-            </main>
-          </div>
-          <Footer />
-          <GlobalSearchModal />
-        </div>
+        <AppMain />
       </CourseProvider>
     </AuthProvider>
   );

@@ -40,7 +40,7 @@ export const PricingView: React.FC = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-xl">Pro Academy</h3>
             <p className="text-xs text-slate-400">Complete access for aspiring software engineers.</p>
-            <div className="text-4xl font-black">₹2,500 <span className="text-xs font-normal text-slate-400">/ seat</span></div>
+            <div className="text-4xl font-black">₹0 <span className="text-xs font-normal text-slate-400">/ forever</span></div>
             <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-400" /> Unlimited access to 200+ courses</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-400" /> 24/7 Gemini 3.6 Flash AI Tutor</li>
@@ -56,7 +56,7 @@ export const PricingView: React.FC = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-xl text-slate-900 dark:text-white">Team & Campus</h3>
             <p className="text-xs text-slate-500">For universities, coding bootcamps, & engineering teams.</p>
-            <div className="text-4xl font-black text-slate-900 dark:text-white">₹10,000 <span className="text-xs font-normal text-slate-400">/ seat</span></div>
+            <div className="text-4xl font-black text-slate-900 dark:text-white">₹0 <span className="text-xs font-normal text-slate-400">/ forever</span></div>
             <ul className="space-y-3 text-xs text-slate-600 dark:text-slate-300">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Everything in Pro Academy</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Team progress analytics & drop-off charts</li>

@@ -79,15 +79,16 @@ export const mockCourses: Course[] = [
             duration: '18 min',
             type: 'video',
             videoUrl: 'https://www.youtube.com/embed/kqtD5dpn9C8',
-            readingContent: 'Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its notable use of significant whitespace.',
+            readingContent: 'Python is an interpreted, high-level, general-purpose programming language created by Guido van Rossum.',
             resources: [{ title: 'Python Installation Guide', url: '#' }]
           },
           {
             id: 'py-les-2',
             title: '1.2 Variables, Data Types & Dynamic Typing',
             duration: '22 min',
-            type: 'reading',
-            readingContent: '### Understanding Variables in Python\n\nIn Python, variables are dynamically typed pointers to objects in memory. You do not need to specify data types explicitly.\n\n```python\n# Examples of Python Variables\nage = 25              # int\npi = 3.14159          # float\nname = "CodeVerse"    # str\nis_active = True      # bool\n```',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/rfscVS0vtbw',
+            readingContent: 'In Python, variables are dynamically typed pointers to objects in memory.',
             codeStarter: 'age = 25\nname = "CodeVerse"\nprint(f"Welcome to {name}! Student age: {age}")',
             codeLanguage: 'python'
           },
@@ -124,9 +125,10 @@ export const mockCourses: Course[] = [
         lessons: [
           {
             id: 'py-les-4',
-            title: '2.1 Conditional Logic & Pattern Matching',
+            title: '2.1 Object-Oriented Programming & Classes',
             duration: '25 min',
-            type: 'coding',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/JeznW_7DlB0',
             codeStarter: '# Write a function that checks if a number is prime\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprint("Is 17 prime?", is_prime(17))\nprint("Is 20 prime?", is_prime(20))',
             codeLanguage: 'python'
           }
@@ -159,7 +161,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
       bio: 'Ex-AMD Kernel Engineer specializing in high-frequency performance and operating systems.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'cpp-mod-1',
+        title: 'Module 1: C++ Syntax, Compilation & Hardware Model',
+        duration: '8 Hours',
+        lessons: [
+          {
+            id: 'cpp-les-1',
+            title: '1.1 C++20 Fundamentals & Modern Toolchains',
+            duration: '25 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/vLnPwxZdW4Y',
+            readingContent: 'Learn C++ syntax, memory layout, GCC/Clang compilers, and structural architecture.'
+          },
+          {
+            id: 'cpp-les-2',
+            title: '1.2 Pointers, Memory Addresses & Raw Allocation',
+            duration: '30 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/1v_4dL8l8pQ',
+            readingContent: 'Master raw pointers, stack vs heap allocation, and memory safety patterns.'
+          }
+        ]
+      },
+      {
+        id: 'cpp-mod-2',
+        title: 'Module 2: Smart Pointers, Templates & Move Semantics',
+        duration: '10 Hours',
+        lessons: [
+          {
+            id: 'cpp-les-3',
+            title: '2.1 Smart Pointers (std::unique_ptr & std::shared_ptr)',
+            duration: '28 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/BYr6503L-gU',
+            readingContent: 'Avoid memory leaks with RAII and smart pointer ownership semantics.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'java-masterclass',
@@ -186,7 +227,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
       bio: 'Cloud Architect with 15 years experience designing resilient Java microservices.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'java-mod-1',
+        title: 'Module 1: Java Core & Object-Oriented Fundamentals',
+        duration: '10 Hours',
+        lessons: [
+          {
+            id: 'java-les-1',
+            title: '1.1 JDK 21 Setup & Object-Oriented Architecture',
+            duration: '30 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/A74TOX803D0',
+            readingContent: 'Master classes, encapsulation, inheritance, interfaces, and polymorphism.'
+          },
+          {
+            id: 'java-les-2',
+            title: '1.2 Java Multithreading & Concurrency Controls',
+            duration: '35 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/grEKMHGYyns',
+            readingContent: 'Understand thread lifecycle, synchronized blocks, and concurrent collections.'
+          }
+        ]
+      },
+      {
+        id: 'java-mod-2',
+        title: 'Module 2: Spring Boot 3 REST Microservices',
+        duration: '12 Hours',
+        lessons: [
+          {
+            id: 'java-les-3',
+            title: '2.1 Building Production REST APIs with Spring Boot',
+            duration: '40 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/9SGDpanrc8U',
+            readingContent: 'Create scalable Spring Boot services with dependency injection and JPA.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'modern-javascript',
@@ -213,7 +293,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
       bio: 'Open-source creator and UI engineer dedicated to clear web technologies.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'js-mod-1',
+        title: 'Module 1: JavaScript Engine & ES6+ Syntax',
+        duration: '6 Hours',
+        lessons: [
+          {
+            id: 'js-les-1',
+            title: '1.1 JS Execution Context, Hoisting & Scoping',
+            duration: '25 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/W6NZfCO5SIk',
+            readingContent: 'Understand lexical environment, scope chains, and let/const closures.'
+          },
+          {
+            id: 'js-les-2',
+            title: '1.2 Promises, Async/Await & Event Loop',
+            duration: '32 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/8aGhZQkoFbQ',
+            readingContent: 'Master microtasks, call stack, event loop queue, and asynchronous workflows.'
+          }
+        ]
+      },
+      {
+        id: 'js-mod-2',
+        title: 'Module 2: Web APIs & Fetching RESTful Data',
+        duration: '8 Hours',
+        lessons: [
+          {
+            id: 'js-les-3',
+            title: '2.1 Modern Fetch API & Async Web Requests',
+            duration: '20 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/cuEtnrL9-H0',
+            readingContent: 'Perform GET/POST HTTP requests and handle JSON data in modern browsers.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'fullstack-webdev',
@@ -241,7 +360,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       bio: 'Ex-Google AI Engineer with over 12 years of teaching computer science.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'fs-mod-1',
+        title: 'Module 1: React 19 UI & Tailwind CSS Mastery',
+        duration: '15 Hours',
+        lessons: [
+          {
+            id: 'fs-les-1',
+            title: '1.1 Modern React Components, State & Props',
+            duration: '40 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/bMknfKXIFA8',
+            readingContent: 'Build interactive user interfaces using modern React hooks and state.'
+          },
+          {
+            id: 'fs-les-2',
+            title: '1.2 Utility-First Styling with Tailwind CSS',
+            duration: '25 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/ft30zcMlFao',
+            readingContent: 'Style clean responsive web applications quickly with Tailwind utility classes.'
+          }
+        ]
+      },
+      {
+        id: 'fs-mod-2',
+        title: 'Module 2: Node.js & Express REST Backend APIs',
+        duration: '18 Hours',
+        lessons: [
+          {
+            id: 'fs-les-3',
+            title: '2.1 Express.js Backend Server & REST Endpoints',
+            duration: '35 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/Oe421EPjeBE',
+            readingContent: 'Build secure backend REST APIs with Express, JSON middleware, and routing.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'ethical-cybersecurity',
@@ -268,7 +426,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
       bio: 'Former Military Cyber Operations Lead now training ethical security professionals.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'sec-mod-1',
+        title: 'Module 1: Cybersecurity & Defensive Fundamentals',
+        duration: '10 Hours',
+        lessons: [
+          {
+            id: 'sec-les-1',
+            title: '1.1 Introduction to Cyber Defense & Ethical Hacking',
+            duration: '30 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/3Kq1MIfTWCE',
+            readingContent: 'Learn fundamental security principles, threat vectors, and CIA triad.'
+          },
+          {
+            id: 'sec-les-2',
+            title: '1.2 Wireshark Packet Inspection & Network Defense',
+            duration: '35 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/qwA6MmbeGNo',
+            readingContent: 'Analyze live TCP/IP network traffic and detect malicious packet signatures.'
+          }
+        ]
+      },
+      {
+        id: 'sec-mod-2',
+        title: 'Module 2: Web Application Penetration & Defense',
+        duration: '12 Hours',
+        lessons: [
+          {
+            id: 'sec-les-3',
+            title: '2.1 Auditing Web Vulnerabilities (SQLi & XSS)',
+            duration: '28 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/F-G93442AUI',
+            readingContent: 'Identify OWASP Top 10 web vulnerabilities and implement secure sanitization.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'ai-python-gemini',
@@ -295,7 +492,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       bio: 'Ex-Google AI Engineer with over 12 years of teaching computer science.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'ai-mod-1',
+        title: 'Module 1: Machine Learning Foundations & PyTorch',
+        duration: '12 Hours',
+        lessons: [
+          {
+            id: 'ai-les-1',
+            title: '1.1 Supervised Learning & Neural Network Math',
+            duration: '35 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/i_LwzRVP7bg',
+            readingContent: 'Master gradient descent, backpropagation, and loss function optimization.'
+          },
+          {
+            id: 'ai-les-2',
+            title: '1.2 Computer Vision & Deep Learning with PyTorch',
+            duration: '40 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/V_xro1bcAuA',
+            readingContent: 'Train convolutional neural networks for image classification tasks.'
+          }
+        ]
+      },
+      {
+        id: 'ai-mod-2',
+        title: 'Module 2: Generative AI & Google Gemini API',
+        duration: '14 Hours',
+        lessons: [
+          {
+            id: 'ai-les-3',
+            title: '2.1 Building GenAI Agents with Google Gemini API',
+            duration: '30 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/G2fqAlgmoPo',
+            readingContent: 'Integrate multi-modal LLM reasoning into Python backends with Gemini API.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'sql-database-mastery',
@@ -322,7 +558,46 @@ export const mockCourses: Course[] = [
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
       bio: 'Cloud Architect with 15 years experience designing resilient databases.'
     },
-    modules: []
+    modules: [
+      {
+        id: 'sql-mod-1',
+        title: 'Module 1: Relational Database Design & Queries',
+        duration: '8 Hours',
+        lessons: [
+          {
+            id: 'sql-les-1',
+            title: '1.1 SQL SELECT, INNER/OUTER JOINs & Grouping',
+            duration: '30 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/HXV3zeQKqGY',
+            readingContent: 'Write relational database queries with multi-table JOINs and aggregations.'
+          },
+          {
+            id: 'sql-les-2',
+            title: '1.2 Schema Normalization & PostgreSQL Indexes',
+            duration: '28 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/qw--VYLpxG4',
+            readingContent: 'Design 3NF normalized tables and B-Tree indexes for fast query execution.'
+          }
+        ]
+      },
+      {
+        id: 'sql-mod-2',
+        title: 'Module 2: ACID Transactions & Performance Tuning',
+        duration: '10 Hours',
+        lessons: [
+          {
+            id: 'sql-les-3',
+            title: '2.1 ACID Transactions, Locks & Database Tuning',
+            duration: '25 min',
+            type: 'video',
+            videoUrl: 'https://www.youtube.com/embed/7S_tz1z_5bA',
+            readingContent: 'Maintain data consistency with BEGIN/COMMIT transactions and row locks.'
+          }
+        ]
+      }
+    ]
   }
 ];
 

@@ -21,15 +21,17 @@ export const LessonPlayer: React.FC = () => {
   const { completeLesson } = useAuth();
   
   const course = courses.find(c => c.id === selectedCourseId) || courses[0];
-  const allLessons = course.modules.flatMap(m => m.lessons);
+  const allLessons = course?.modules?.flatMap(m => m.lessons) || [];
   const currentLessonIndex = allLessons.findIndex(l => l.id === selectedLessonId);
+  const defaultCourseVideo = course?.modules?.[0]?.lessons?.[0]?.videoUrl || 'https://www.youtube.com/embed/kqtD5dpn9C8';
+
   const lesson = allLessons[currentLessonIndex >= 0 ? currentLessonIndex : 0] || allLessons[0] || {
-    id: 'py-les-1',
-    title: '1.1 Setting Up Python 3.12 & Environment Variables',
+    id: `${course?.id || 'py'}-les-1`,
+    title: `1.1 Introduction to ${course?.title || 'Programming'}`,
     duration: '18 min',
     type: 'video',
-    videoUrl: 'https://www.youtube.com/embed/kqtD5dpn9C8',
-    readingContent: 'Python is an interpreted, high-level, general-purpose programming language. Learn how to configure environment variables and PATH.'
+    videoUrl: defaultCourseVideo,
+    readingContent: course?.description || 'Welcome to this comprehensive course.'
   };
 
   const [aiQuery, setAiQuery] = useState('');
@@ -104,7 +106,7 @@ export const LessonPlayer: React.FC = () => {
             {lesson.type === 'video' ? (
               <div className="aspect-video w-full">
                 <iframe
-                  src={lesson.videoUrl || "https://www.youtube.com/embed/kqtD5dpn9C8"}
+                  src={lesson.videoUrl || defaultCourseVideo}
                   title={lesson.title}
                   className="w-full h-full border-0"
                   allowFullScreen

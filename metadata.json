@@ -1,0 +1,6 @@
+{
+  "name": "Education World",
+  "description": "Online learning platform for programming, software development, AI, cloud computing, databases, and ethical cybersecurity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
